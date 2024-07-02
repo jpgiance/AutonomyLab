@@ -1,3 +1,5 @@
+// ESP32 Version
+
 #include <AccelStepper.h>
 #include <Wire.h>
 
@@ -29,7 +31,7 @@ void setup() {
   
   // Set the maximum speed and acceleration
   stepper.setMaxSpeed(1000);  // Set the maximum speed in steps per second
-  stepper.setAcceleration(500);  // Set the acceleration in steps per second^2
+  stepper.setAcceleration(50000);  // Set the acceleration in steps per second^2
 }
 
 void loop() {
@@ -74,7 +76,7 @@ void testStepperMotor(){
   delay(1000);
   
   // Change the acceleration
-  stepper.setAcceleration(1000);  // Set a new acceleration value
+  stepper.setAcceleration(100000);  // Set a new acceleration value
   
   // Move the stepper motor in the positive direction with the new acceleration
   stepper.moveTo(4000);  // Set the target position in steps
